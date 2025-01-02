@@ -1,9 +1,13 @@
 <h2>Create a new task</h2>
-<form>
+<form [formGroup]="TaskForm" (ngSubmit)="onSubmit()">
   <app-input
     [label]="'New Task'"
     [id]="'new-task'"
-    [formControl]="form.controls.name"
+    [formControl]="TaskForm.controls.name"
   />
-  <app-checkbox />
+  <app-checkbox [label]="'Terms and conditions'" 
+  [formControl]="TaskForm.controls.terms" /><br>
+  <input type="submit">
+  <button [routerLink]="['/tasks']">Show Tasks</button>
+
 </form>

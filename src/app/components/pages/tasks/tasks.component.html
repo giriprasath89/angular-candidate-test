@@ -1,0 +1,19 @@
+<p>Task Lists</p>
+<table>
+    <th>
+        S.No
+    </th>
+    <th>
+        Taks Name
+    </th>
+    <th>
+        Action
+    </th>
+    <tr *ngFor="let task of tasks; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{task.taskName}}</td>
+        <td style="text-decoration: underline; color: blue; cursor: pointer;" 
+        (click)="goToDetail(task.taskId)">Detail</td>
+    </tr>
+    
+</table>

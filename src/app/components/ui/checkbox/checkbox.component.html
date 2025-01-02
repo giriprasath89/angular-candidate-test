@@ -1,1 +1,5 @@
-<p>checkbox works!</p>
+
+    <input type="checkbox" [value]="value()" (input)="onInput($event)" [id]="id()" />
+    @if(label()) {
+        <label [htmlFor]="id()">{{ label() }}</label>
+        }
